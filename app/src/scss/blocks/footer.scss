@@ -1,0 +1,22 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.footer {
+  @include m.flex(column, center, center);
+
+  &__links {
+    @include m.flex();
+
+    margin-bottom: 24.2px;
+  }
+
+  &__link {
+    --link-color: #{f.color(heading)};
+
+    @include m.relative(42px, left);
+  }
+
+  &__copyright {
+    @include m.text($c: f.color(text));
+  }
+}

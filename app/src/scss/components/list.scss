@@ -1,0 +1,30 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+
+.list {
+  display: block;
+
+  counter-reset: list-item;
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    display: block;
+    @include m.relative(24px, top);
+
+    &_increment {
+      position: relative;
+
+      &:before {
+        counter-increment: list-item;
+        content: counter(list-item) ".";
+
+        margin-right: 5px;
+
+        @include m.text($w: 600, $c: f.color(black));
+      }
+    }
+  }
+}

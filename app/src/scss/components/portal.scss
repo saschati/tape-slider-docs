@@ -1,0 +1,122 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.portal {
+  position: relative;
+
+  @include m.box(20px, 100px, 50%);
+
+  &_color {
+    &_blue {
+      @keyframes portal-blue {
+        from {
+          box-shadow: inset 0 0 5px 5px f.color(portal-blue-light),
+          0 0 0 5px f.color(portal-blue-round),
+          0 0 10px 10px f.color(portal-blue-light);
+        }
+        to {
+          box-shadow: inset 0 0 5px 5px f.color(portal-blue-light),
+          0 0 5px 5px f.color(portal-blue-round),
+          0 0 20px 10px f.color(portal-blue-light);
+        }
+      }
+
+      animation: portal-blue 3s infinite alternate-reverse;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+
+        @include m.box(30px, 2px);
+
+        box-shadow: inset 0 5px 5px 0 f.color(portal-blue-round);
+
+        opacity: 0.5;
+      }
+
+      &:before {
+        top: 10px;
+        right: -100px;
+
+        @keyframes portal-line-before-blue {
+          to {
+            right: 0;
+            width: 0;
+          }
+        }
+
+        animation: portal-line-before-blue 1s .5s infinite;
+      }
+
+      &:after {
+        top: 70px;
+        right: -120px;
+
+        @keyframes portal-line-after-blue {
+          to {
+            right: 0;
+            width: 0;
+          }
+        }
+
+        animation: portal-line-after-blue 1s .5s infinite;
+      }
+    }
+
+    &_yellow {
+      @keyframes portal-yellow {
+        from {
+          box-shadow: inset 0 0 5px 5px f.color(portal-yellow-light),
+          0 0 0 5px f.color(portal-yellow-round),
+          0 0 10px 10px f.color(portal-yellow-light);
+        }
+        to {
+          box-shadow: inset 0 0 5px 5px f.color(portal-yellow-light),
+          0 0 5px 5px f.color(portal-yellow-round),
+          0 0 20px 10px f.color(portal-yellow-light);
+        }
+      }
+
+      animation: portal-yellow 3s infinite alternate-reverse;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+
+        @include m.box(30px, 2px);
+
+        box-shadow: inset 0 5px 5px 0 f.color(portal-yellow-round);
+
+        opacity: 0.5;
+      }
+
+      &:before {
+        top: 10px;
+        left: -100px;
+
+        @keyframes portal-line-before-yellow {
+          to {
+            left: 0;
+            width: 0;
+          }
+        }
+
+        animation: portal-line-before-yellow 1s .5s infinite;
+      }
+
+      &:after {
+        top: 80px;
+        left: -120px;
+
+        @keyframes portal-line-after-yellow {
+          to {
+            left: 0;
+            width: 0;
+          }
+        }
+
+        animation: portal-line-after-yellow 1s .5s infinite;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.paragraph {
+  margin-block: 80px;
+
+  @include m.box(100%, 1px);
+  border-top: 1px solid f.color(grey);
+}

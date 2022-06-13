@@ -1,0 +1,18 @@
+@use './functions' as f;
+@use './mixin' as m;
+
+@mixin title($type: h1) {
+  @include m.font(common);
+
+  @if ($type == h1 or $type == 72px) {
+    @include m.text($size: f.size(72px), $lh: f.lh(86px), $w: 700, $ls: -1px);
+  } @else if ($type == h2 or $type == 58px) {
+    @include m.text($size: f.size(58px), $lh: f.lh(70px), $w: 700, $ls: -1px);
+  } @else if ($type == h3 or $type == 42px) {
+    @include m.text($size: f.size(42px), $lh: f.lh(52px), $w: 700, $ls: -0.4px);
+  } @else if ($type == h5 or $type == 22px) {
+    @include m.text($size: f.size(22px), $lh: f.lh(32px), $w: 500);
+  } @else {
+    @include m.text($size: f.size(32px), $lh: f.lh(40px), $w: 700, $ta: center)
+  }
+}

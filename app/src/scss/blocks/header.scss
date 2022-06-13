@@ -1,0 +1,56 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.header {
+  @include m.flex(center);
+
+  padding-inline: 115px;
+
+  color: f.color(white);
+  background-color: f.color(dark);
+
+  transition: height .7s, opacity .7s;
+
+  &_type {
+    &_sticky {
+      z-index: 10;
+      top: 0;
+      position: sticky;
+
+      @keyframes header-sticky {
+        from {
+          height: 0;
+          opacity: 0;
+        }
+        to {
+          height: 100%;
+          opacity: 1;
+        }
+      }
+
+      animation: header-sticky .7s both;
+    }
+    &_static {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    @include m.text(f.size(24px), $lh: f.lh(31px), $w: 700);
+  }
+
+  &__link {
+    --link-color: #{f.color(white)};
+
+    @include m.text($lh : f.lh(31px));
+
+    @include m.relative(43px, left);
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+}

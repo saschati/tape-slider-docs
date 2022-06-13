@@ -1,0 +1,20 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/title' as t;
+
+.title {
+  color: f.color(Heading);
+
+  &_h1 {
+    @include t.title(h1);
+  }
+  &_h2 {
+    @include t.title(h2);
+  }
+  &_h3 {
+    @include t.title(h3);
+  }
+  &_h5 {
+    @include t.title(h5);
+  }
+}

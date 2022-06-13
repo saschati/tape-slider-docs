@@ -1,0 +1,24 @@
+@use 'src/scss/core/page' as page;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/screen' as screen;
+
+.peculiarity {
+  @include page.style;
+
+  --scrollbar-width: 12px;
+  --scrollbar-radius: 0;
+  --scrollbar-thumb-bg-color: #{f.color(dark)};
+
+  &__container {
+    display: grid;
+    grid-template:
+       ".    glory_to_ukraine        ." auto
+       ".    worth_to_know           ." auto
+       ".    problem_disappearance   ." auto
+       ".    problem_timing_function ." auto
+       ".    problem_offset          ." auto
+       ".    help                    ." auto
+      / auto minmax(auto, 1400px)  auto
+    ;
+  }
+}

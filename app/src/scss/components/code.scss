@@ -1,0 +1,13 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+
+.code {
+  padding: 30px 39px 30px 33px;
+
+  @include m.text($c: f.color(Heading), $lh: f.lh(22px));
+  @include m.font(code);
+  background-color: f.color(grey);
+  border-radius: 10px;
+
+  opacity: 0.5;
+}

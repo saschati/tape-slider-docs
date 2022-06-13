@@ -1,0 +1,72 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.information {
+  padding: 40px 214px 40px 161px;
+
+  @include m.flex(wrap, $ai: flex-start);
+
+  &__title {
+    margin-bottom: 30px;
+
+    flex: 1 100%;
+  }
+
+  &__description {
+    flex: 1 100%;
+
+    @include m.text(f.size(18px), f.color(text), $lh: f.lh(28px), $w: 500);
+
+    opacity: 0.9;
+
+    margin-bottom: 30px;
+
+    &_for {
+      &_tape {
+        margin-bottom: 0;
+        margin-top: 50px;
+      }
+    }
+
+    &_mod {
+      &_mb {
+        margin-bottom: 30px;
+      }
+      &_mt {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__code {
+    margin-right: 59px;
+
+    width: 770px;
+  }
+
+  &__code + &__description, &__info + &__description {
+    margin-top: 30px;
+  }
+
+  &__info {
+    flex: 1;
+
+    padding-top: 30px;
+  }
+
+  &__tapes {
+    width: 770px;
+
+    @include m.flex($jc: space-between);
+  }
+
+  &__tape {
+    margin-top: 30px;
+  }
+
+  &__timing {
+    @include m.square(150px);
+
+    margin-left: 50px;
+  }
+}

@@ -1,0 +1,44 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+
+.glory-to-ukraine {
+  @include m.flex($jc: center);
+
+  padding: 80px 214px 83px 161px;
+
+  &__tape {
+    position: relative;
+    overflow-x: hidden;
+    width: 400px;
+
+    @include m.flex($ai: center);
+
+    &:before {
+      content: "";
+      position: absolute;
+
+      border-radius: 15px;
+
+      @include m.box(400px, 100px);
+
+      background: linear-gradient(90deg, f.color(portal-blue-light) 0%, f.color(portal-yellow-light) 100%);
+      opacity: .45;
+    }
+  }
+
+  &__item {
+    z-index: 3;
+
+    flex-shrink: 0;
+  }
+
+  &__yellow-portal {
+    margin-left: -20px;
+    z-index: 2;
+  }
+
+  &__blue-portal {
+    margin-right: -20px;
+    z-index: 2;
+  }
+}

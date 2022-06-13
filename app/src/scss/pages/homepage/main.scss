@@ -1,0 +1,51 @@
+@use 'src/scss/core/page' as page;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/screen' as screen;
+
+.homepage {
+  @include page.style;
+
+  --scrollbar-width: 12px;
+  --scrollbar-radius: 0;
+  --scrollbar-thumb-bg-color: #{f.color(dark)};
+
+  &__container {
+    display: grid;
+    grid-template:
+       ".    glory_to_ukraine      ." auto
+       ".    what_is               ." auto
+       ".    alert                 ." auto
+       ".    preface               ." auto
+       ".    install               ." auto
+       ".    usage                 ." auto
+       ".    advanced              ." auto
+
+       ".    paragraph_1           ." auto
+
+       ".    how_it_works          ." auto
+
+       ".    paragraph_2           ." auto
+
+       ".    docs                  ." auto
+       ".    docs_wrapper          ." auto
+       ".    docs_direction        ." auto
+       ".    docs_options_shift    ." auto
+       ".    docs_options_duration ." auto
+       ".    docs_options_timing   ." auto
+       ".    docs_options_insert   ." auto
+
+       ".    paragraph_3           ." auto
+
+       ".    styling_tips          ." auto
+
+       ".    paragraph_4           ." auto
+
+       ".    this_all              ." auto
+      / auto minmax(auto, 1400px)  auto
+    ;
+  }
+
+  &__alert {
+    padding: 40px 214px 40px 161px;
+  }
+}

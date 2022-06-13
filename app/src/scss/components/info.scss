@@ -1,0 +1,24 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+
+.info {
+  @include m.flex(wrap, $ai: flex-start, $ac: flex-start);
+
+  &__icon {
+    @include m.text(f.size(18px), f.color(Heading), $lh: f.lh(26px));
+
+    margin-right: 18px;
+  }
+
+  &__title {
+    @include m.text(f.size(14px), f.color(Heading), $lh: f.lh(26px), $w: 700, $tt: uppercase, $ls: 2px);
+
+    margin-bottom: 18px;
+  }
+
+  &__description {
+    flex: 1 100%;
+
+    @include m.text($c: f.color(text));
+  }
+}

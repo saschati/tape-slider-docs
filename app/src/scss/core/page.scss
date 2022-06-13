@@ -1,0 +1,37 @@
+@use './functions' as f;
+@use './mixin' as m;
+@use './screen' as screen;
+
+@mixin style {
+  background-color: f.color(white);
+  color: f.color(black);
+  line-height: f.v(line-height);
+
+  @include m.font(common);
+  font-style: normal;
+  font-weight: 400;
+  font-size: f.v(text-size-base);
+}
+
+.page {
+  display: grid;
+  grid-template:
+        'header'  100px
+        'content' calc(100% - 320px)
+        'footer'  220px
+    /    100%
+  ;
+
+  // AREA ITEMS
+  &__area-footer {
+    grid-area: footer;
+  }
+
+  &__area-header {
+    grid-area: header;
+  }
+
+  &__area-content {
+    grid-area: content;
+  }
+}

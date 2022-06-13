@@ -1,0 +1,31 @@
+@use "src/scss/common/bootstrap";
+
+// COMPONENTS
+@use "src/scss/components/link";
+@use "src/scss/components/btn";
+@use "src/scss/components/alert";
+@use "src/scss/components/icons";
+@use "src/scss/components/code";
+@use "src/scss/components/list";
+@use "src/scss/components/title";
+@use "src/scss/components/info";
+@use "src/scss/components/portal";
+@use "src/scss/components/scrollbar";
+@use "src/scss/components/paragraph";
+
+// MIXED
+@use "src/scss/mixed/grid";
+@use "src/scss/mixed/bg";
+@use "src/scss/mixed/clr";
+@use "src/scss/mixed/state";
+@use "src/scss/mixed/weight";
+
+// BLOCKS
+@use "src/scss/blocks/footer";
+@use "src/scss/blocks/header";
+@use "src/scss/blocks/information";
+@use "src/scss/blocks/tape";
+@use "src/scss/blocks/glory-to-ukraine";
+
+// THIS
+@use "main";
