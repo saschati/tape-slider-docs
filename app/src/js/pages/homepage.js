@@ -1,4 +1,8 @@
-import lozad from "lozad";
+import initCssEditor from '../heplers/codemirrorcss';
+import initJsEditor from '../heplers/codemirrorjs';
+
+import docsJs from '../docs/mirror/js/homepage.js'
+import docsCss from '../docs/mirror/css/homepage.js'
 
 import Tape from "@saschati/tape-slider";
 import Right from "@saschati/tape-slider/src/direction/right";
@@ -9,6 +13,20 @@ import linage from "@saschati/tape-slider/src/animate/timing/linage";
 import quad from "@saschati/tape-slider/src/animate/timing/quad";
 
 window.addEventListener('load', function () {
+    /**
+     * Js Codemirror
+     */
+    for (const elem of document.querySelectorAll('.js-mirror-js')) {
+        initJsEditor(elem, docsJs[elem.dataset.mirror]);
+    }
+
+    /**
+     * Css Codemirror
+     */
+    for (const elem of document.querySelectorAll('.js-mirror-css')) {
+        initCssEditor(elem, docsCss[elem.dataset.mirror]);
+    }
+
     /**
      * Duration example
      */

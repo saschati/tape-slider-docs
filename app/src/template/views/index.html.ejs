@@ -55,20 +55,12 @@
 
         <div id="install" class="information grid__area" style="--grid-area: install">
             <h3 class="information__title title title_h5">Install:</h3>
-            <code class="information__code code js-mirror-js">npm i @saschati/tape-slider</code>
+            <code class="information__code code js-mirror-js" data-mirror="install"></code>
         </div>
 
         <div class="information grid__area" style="--grid-area: usage">
             <h3 class="information__title title title_h5">Usage:</h3>
-            <code class="information__code code js-mirror-js">import Tape from "@saschati/tape-slider";
-
-// This event is required for the plugin to work correctly
-window.addEventListener('load', function () {
-   // By default, the ribbon moves to the right
-   const tape = new Tape({wrapper: document.querySelector('.tape')});
-
-   tape.run();
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="usage"></code>
             <div class="information__info info">
                 <i class="info__icon fa-solid fa-circle-exclamation"></i>
                 <h6 class="info__title">Note</h6>
@@ -90,35 +82,7 @@ window.addEventListener('load', function () {
             <p class="information__description">
                 Don't ignore the comments, they can help you better understand what's going on ;)
             </p>
-            <code class="information__code code js-mirror-js">// Tape direction classes, they implement methods for calculating and distance to the desired point
-import Right from "@saschati/tape-slider/src/direction/right";
-import Left from "@saschati/tape-slider/src/direction/left";
-import Up from "@saschati/tape-slider/src/direction/up";
-import Down from "@saschati/tape-slider/src/direction/down";
-// Offset classes, these classes are responsible for reproducing the movement of the object in the tape
-import ShiftY from "@saschati/tape-slider/src/direction/shifx/shift-y";
-import ShiftX from "@saschati/tape-slider/src/direction/shifx/shift-x";
-// A linear function for calculating how progress should be calculated
-import linage from "@saschati/tape-slider/src/animate/timing/linage";
-// The class of the tape itself
-import Tape from "@saschati/tape-slider";
-
-// This event is required for the plugin to work correctly
-window.addEventListener('load', function () {
-    const tape = new Tape({
-        wrapper: document.querySelector('.tape'), // The wrapper field must be a DOM Element object
-        direction: Right, // "Right | Left | Up | Down" The field responsible for the direction currently has 4 directions, by default Right
-        options: {
-            shift: ShiftX, // "ShiftX | ShiftY" The field responsible for the movement of the ribbon for horizontal is ShiftX and vertical ShiftY
-            duration: 20000, // The field responsible for the scroll speed of the tape, the default is 20000
-            timing: linage, // This field is responsible for linear functions for which time will be calculated according to the example of cubic-bezier from css
-            insert: 'append' // The field responsible for the method of adding clones to the tape is required in some cases which will be described below
-        }
-    });
-
-    // Run tape
-    tape.run();
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="advanced"></code>
             <div class="information__info info">
                 <i class="info__icon fa-solid fa-circle-exclamation"></i>
                 <h6 class="info__title">Note</h6>
@@ -200,13 +164,7 @@ window.addEventListener('load', function () {
                 Read about the features of ribbon styling
                 for the correct operation of the plugin <a class="link link_type_hover" href="#styling-tips">#here</a>
             </p>
-            <code class="information__code code js-mirror-js">import Tape from "@saschati/tape-slider";
-
-const tape = new Tape({
-    ...
-    wrapper: document.querySelector('.tape'),
-    ...
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_wrapper"></code>
         </div>
         <div class="information grid__area" style="--grid-area: docs_direction">
             <h3 class="information__title title title_h5">
@@ -215,17 +173,7 @@ const tape = new Tape({
             <p class="information__description">
                 The field responsible for the direction currently has 4 directions, by default Right.
             </p>
-            <code class="information__code code js-mirror-js">import Right from "@saschati/tape-slider/src/direction/right";
-import Left from "@saschati/tape-slider/src/direction/left";
-import Up from "@saschati/tape-slider/src/direction/up";
-import Down from "@saschati/tape-slider/src/direction/down";
-import Tape from "@saschati/tape-slider";
-
-const tape = new Tape({
-    ...
-    direction: Left,
-    ...
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_direction"></code>
             <div class="information__info info">
                 <i class="info__icon fa-solid fa-circle-exclamation"></i>
                 <h6 class="info__title">Note</h6>
@@ -245,17 +193,7 @@ const tape = new Tape({
                 for horizontal is <span class="clr clr_color_third">ShiftX</span> and vertical <span class="clr clr_color_third">ShiftY</span>, default is <span class="clr clr_color_third">ShiftX</span>.
                 If you use the <span class="clr clr_color_third">Up|Down</span> direction, do not forget to pass <span class="clr clr_color_third">options.shift: ShiftY</span> because without it the tape will go accordingly on an x-axis.
             </p>
-            <code class="information__code code js-mirror-js">import ShiftY from "@saschati/tape-slider/src/direction/shifx/shift-y";
-import ShiftX from "@saschati/tape-slider/src/direction/shifx/shift-x";
-import Tape from "@saschati/tape-slider";
-
-const tape = new Tape({
-    ...
-    options: {
-        shift: ShiftY
-    },
-    ...
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_options_shift"></code>
         </div>
         <div class="information grid__area" style="--grid-area: docs_options_duration">
             <h3 class="information__title title title_h5">
@@ -264,15 +202,7 @@ const tape = new Tape({
             <p class="information__description">
                 The field responsible for the scroll speed of the tape, the default is 20000.
             </p>
-            <code class="information__code code js-mirror-js">import Tape from "@saschati/tape-slider";
-
-const tape = new Tape({
-    ...
-    options: {
-        duration: 1000
-    },
-    ...
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_options_duration"></code>
             <div class="information__info info">
                 <i class="info__icon fa-solid fa-triangle-exclamation"></i>
                 <h6 class="info__title">Warning</h6>
@@ -295,20 +225,7 @@ const tape = new Tape({
             <p class="information__description">
                 This field is responsible for timing functions for which time will be calculated according to the example of cubic-bezier from css, default linage.
             </p>
-            <code class="information__code code js-mirror-js">import Tape from "@saschati/tape-slider";
-import linage from "@saschati/tape-slider/src/animate/timing/linage";
-import linage from "@saschati/tape-slider/src/animate/timing/bounce";
-import linage from "@saschati/tape-slider/src/animate/timing/circ";
-import linage from "@saschati/tape-slider/src/animate/timing/quad";
-
-const tape = new Tape({
-    ...
-    options: {
-        duration: 5000,
-        timing: linage
-    },
-    ...
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_options_timing"></code>
             <div class="information__info info">
                 <i class="info__icon fa-solid fa-triangle-exclamation"></i>
                 <h6 class="info__title">Warning</h6>
@@ -354,10 +271,7 @@ const tape = new Tape({
                 You can also write your own timing functions like it:
             </p>
 
-            <code class="information__code code js-mirror-js">// Where timeFraction is a value between 0 and 1
-function quad(n, timeFraction) {
-    return Math.pow(timeFraction, n)
-}</code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_options_timing_quad"></code>
             <div class="information__info info">
                 <i class="info__icon fa-solid fa-circle-exclamation"></i>
                 <h6 class="info__title">Note</h6>
@@ -374,15 +288,7 @@ function quad(n, timeFraction) {
             <p class="information__description">
                 The field responsible for the method of adding clones to the tape is required in some cases which will be described below, default 'append'.
             </p>
-            <code class="information__code code js-mirror-js">import Tape from "@saschati/tape-slider";
-
-const tape = new Tape({
-    ...
-    options: {
-        insert: 'append',
-    },
-    ...
-});</code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_options_insert"></code>
             <p class="information__description">
                 An example in which you will need to use this attribute is if for some reason your content goes from right to left, in which case adding a new item to the end of this list (this is how creating a clone) will break the distance calculation, for example:
             </p>
@@ -449,9 +355,7 @@ const tape = new Tape({
             <p class="information__description list__item list__item_increment">
                 The tape must position itself differently from static.
             </p>
-            <code class="information__code code js-mirror-css">.tape {
-    position: relative; /* absolute | sticky | fixed */
-}</code>
+            <code class="information__code code js-mirror-css" data-mirror="styling_tips_1"></code>
             <p class="information__description">
                 <span class="weight weight_type_w9 clr clr_color_black">Why do it?</span> - Because the positions of the tape elements calculate their
                 position and the required distance using the <span class="clr clr_color_third">offset(Left|Top|Width|Height)</span> properties,
@@ -467,18 +371,7 @@ const tape = new Tape({
                 of elements must be disabled for elements <span class="clr clr_color_third">flex-shrink: 0;</span> that is,
                 they did not decrease by default.
             </p>
-            <code class="information__code code js-mirror-css">.tape {
-    display: flex;
-    justify-content: flex-start; /* flex-end */
-    flex-wrap: nowrap;
-    ...
-}
-
-.tape__item {
-    flex-shrink: 0; /* or min-wight: number; */
-    margin-bottom: 10px;
-    ...
-}</code>
+            <code class="information__code code js-mirror-css" data-mirror="styling_tips_2"></code>
             <div class="information__info info">
                 <i class="info__icon fa-solid fa-circle-exclamation"></i>
                 <h6 class="info__title">Note</h6>
@@ -495,11 +388,7 @@ const tape = new Tape({
                 Do not forget to add to your tape <span class="clr clr_color_black">overflow-(x|y)</span> according to the direction,
                 the elements do not disappear by themselves :)
             </p>
-            <code class="information__code code js-mirror-css">.tape {
-    display: flex;
-    position: relative;
-    overflow-x: hidden;
-}</code>
+            <code class="information__code code js-mirror-css" data-mirror="styling_tips_3"></code>
         </div>
 
         <div class="paragraph grid__area" style="--grid-area: paragraph_4"></div>

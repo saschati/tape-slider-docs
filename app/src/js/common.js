@@ -1,10 +1,3 @@
-import {basicSetup} from "codemirror";
-import {EditorView, keymap} from "@codemirror/view";
-import {indentWithTab} from "@codemirror/commands";
-import {javascript} from "@codemirror/lang-javascript";
-import {css} from "@codemirror/lang-css";
-import {EditorState} from "@codemirror/state";
-
 import Left from "@saschati/tape-slider/src/direction/left";
 import Up from "@saschati/tape-slider/src/direction/up";
 import Down from "@saschati/tape-slider/src/direction/down";
@@ -14,20 +7,6 @@ import Tape from "@saschati/tape-slider";
 import lozad from "lozad";
 
 window.addEventListener('load', function () {
-    /**
-     * Js Codemirror
-     */
-    for (const elem of document.querySelectorAll('.js-mirror-js')) {
-        initJsEditor(elem);
-    }
-
-    /**
-     * Css Codemirror
-     */
-    for (const elem of document.querySelectorAll('.js-mirror-css')) {
-        initCssEditor(elem);
-    }
-
     /**
      * Tapes
      */
@@ -116,47 +95,3 @@ window.addEventListener('load', function () {
         observer.observe();
     }
 });
-
-function initJsEditor(elem) {
-    const doc = elem.innerHTML;
-    elem.innerHTML = '';
-
-    EditorState.readOnly = true;
-
-    return new EditorView({
-        state: EditorState.create({
-            doc,
-            extensions: [
-                basicSetup,
-                keymap.of([indentWithTab]),
-                javascript(),
-                EditorState.changeFilter.of(() => false)
-            ],
-            readOnly: true
-        }),
-
-        parent: elem
-    });
-}
-
-function initCssEditor(elem) {
-    const doc = elem.innerHTML;
-    elem.innerHTML = '';
-
-    EditorState.readOnly = true;
-
-    return new EditorView({
-        state: EditorState.create({
-            doc,
-            extensions: [
-                basicSetup,
-                keymap.of([indentWithTab]),
-                css(),
-                EditorState.changeFilter.of(() => false)
-            ],
-            readOnly: true
-        }),
-
-        parent: elem
-    });
-}
