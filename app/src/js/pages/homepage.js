@@ -98,14 +98,16 @@ window.addEventListener('load', function () {
      * Insert example
      */
     {
-        const tape = new Tape({
-            wrapper: document.querySelector('.js-tape-slider_insert_prepend'),
-            direction: Left,
-            options: {
-                insert: 'prepend',
-            }
-        });
+        {
+            const tape = new Tape({
+                wrapper: document.querySelector('.js-tape-slider_insert_prepend'),
+                direction: Left,
+                options: {
+                    insert: 'prepend',
+                }
+            });
 
-        tape.run();
+            tape.run();
+        }
     }
 });

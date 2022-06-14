@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
             wrapper: document.querySelector('.js-tape-slider_problem_collision'),
             direction: Right,
             options: {
-                duration: 2000,
+                duration: 1000,
             }
         });
 

@@ -24,57 +24,6 @@
             </p>
         </div>
 
-        <div id="problem-disappearance" class="information grid__area" style="--grid-area: problem_disappearance">
-            <h3 class="list__item list__item_increment information__title title title_h5">
-                <span class="clr clr_color_third">Disappearance:</span>
-            </h3>
-            <p class="information__description">
-                The plugin uses the <span class="clr clr_color_third">requestAnimationFrame</span> function to run animation frames,
-                it's a great feature,
-                and it has a moment when the user moves from the tab on which the tape is to any other and stay on another tab for a few seconds,
-                causes the function to stop to save resources.
-                but it affects the tape in which more than one element,
-                they just disappear,
-                and this is a significant problem.
-            </p>
-
-            <div class="alert alert_type_info">
-                <i class="alert__icon fa-solid fa-circle-exclamation"></i>
-                <p class="alert__message">
-                    This problem will be solved in the near future.
-                </p>
-            </div>
-
-            <div class="information__description information__description_for_tape">
-                To see the problem, switch to another tab for <span class="weight weight_type_w7 clr clr_color_third">10 seconds</span>.
-            </div>
-            <div class="information__tape tape tape_direction_row js-tape-slider--right">
-                <div class="tape__item tape__item_direction_row bg bg_color_black"></div>
-                <div class="tape__item tape__item_direction_row bg bg_color_dark"></div>
-                <div class="tape__item tape__item_direction_row bg bg_color_third"></div>
-                <div class="tape__item tape__item_direction_row bg bg_color_primary"></div>
-                <div class="tape__item tape__item_direction_row bg bg_color_npm"></div>
-            </div>
-            <p class="information__description information__description_mod_mt">
-                <span class="weight weight_type_w9 clr clr_color_black">Please reload the page to read further.</span>
-            </p>
-        </div>
-
-        <div id="problem-timing-function" class="information grid__area" style="--grid-area: problem_timing_function">
-            <h3 class="list__item list__item_increment information__title title title_h5">
-                <span class="clr clr_color_third">Timing functions:</span>
-            </h3>
-            <p class="information__description">
-                At this time, time functions do not work with multiple elements,
-                which is a problem whose root is that when calculating motion and position,
-                the elements know nothing about the fact that there is another element in the neighborhood.
-            </p>
-            <div class="information__tape tape tape_direction_row js-tape-slider_problem_timing">
-                <div class="tape__item tape__item_direction_row bg bg_color_primary"></div>
-                <div class="tape__item tape__item_direction_row bg bg_color_npm"></div>
-            </div>
-        </div>
-
         <div id="problem-offset" class="information grid__area" style="--grid-area: problem_offset">
             <h3 class="list__item list__item_increment information__title title title_h5">
                 <span class="clr clr_color_third">Offset:</span>
@@ -84,13 +33,52 @@
                 and even with some iterations of the tape,
                 it can be shifted both to the right and to the left when calculating the path.
             </p>
-
+            <div class="alert alert_type_info">
+                <i class="alert__icon fa-solid fa-circle-exclamation"></i>
+                <p class="alert__message">
+                    Partially fixed.
+                </p>
+            </div>
             <div class="information__tape tape tape_direction_row js-tape-slider_problem_collision">
                 <div class="tape__item tape__item_direction_row bg bg_color_black"></div>
                 <div class="tape__item tape__item_direction_row bg bg_color_dark"></div>
                 <div class="tape__item tape__item_direction_row bg bg_color_third"></div>
                 <div class="tape__item tape__item_direction_row bg bg_color_primary"></div>
                 <div class="tape__item tape__item_direction_row bg bg_color_npm"></div>
+            </div>
+        </div>
+
+        <div id="problem-offset" class="information grid__area" style="--grid-area: problem_overflow">
+            <h3 class="list__item list__item_increment information__title title title_h5">
+                <span class="clr clr_color_third">Overflow:</span>
+            </h3>
+            <p class="information__description">
+                At this time, the tape does not expand according to the size of the content that is in it, but is based on the size of the tape.
+            </p>
+            <div class="alert alert_type_info">
+                <i class="alert__icon fa-solid fa-circle-exclamation"></i>
+                <p class="alert__message">
+                    This will be finalized soon.
+                </p>
+            </div>
+            <p class="information__description information__description_for_tape">
+                <span class="clr clr_color_black weight weight_type_w7">In this example, one element is on another :(</span>
+            </p>
+            <div class="information__tape tape tape_type_counter tape_direction_row js-tape-slider--right">
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_black"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_dark"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_third"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_primary"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_npm"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_black"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_dark"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_third"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_primary"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_npm"></div>
+                <div class="clr clr_color_white tape__item tape__item_mod_count tape__item_direction_row bg bg_color_black"></div>
+                <div class="clr clr_color_white tape__item tape__item_direction_row bg bg_color_dark">
+                    <span class="weight weight_type_w9">:(</span>
+                </div>
             </div>
         </div>
 
