@@ -33,7 +33,8 @@ window.addEventListener('load', function () {
             shift: ShiftX, // "ShiftX | ShiftY" The field responsible for the movement of the ribbon for horizontal is ShiftX and vertical ShiftY
             duration: 20000, // The field responsible for the scroll speed of the tape, the default is 20000
             timing: linage, // This field is responsible for linear functions for which time will be calculated according to the example of cubic-bezier from css
-            insert: 'append' // The field responsible for the method of adding clones to the tape is required in some cases which will be described below
+            insert: 'append', // The field responsible for the method of adding clones to the tape is required in some cases which will be described below
+            elasticDistance: true, // This field indicates that you need to calculate the size of the tape, taking into account also the size of its elements, the default is true
         }
     });
 
@@ -152,4 +153,14 @@ tape.run();
 
 wrapper.addEventListener('mouseenter', e => void tape.pause());
 wrapper.addEventListener('mouseleave', e => tape.unpause());`,
+
+    docs_options_elasticDistance: `import Tape from "@saschati/tape-slider";
+
+const tape = new Tape({
+    ...
+    options: {
+        elasticDistance: true,
+    },
+    ...
+});`,
 };

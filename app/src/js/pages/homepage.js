@@ -112,6 +112,22 @@ window.addEventListener('load', function () {
     }
 
     /**
+     * elasticDistance false example
+     */
+    {
+        {
+            const tape = new Tape({
+                wrapper: document.querySelector('.js-tape-slider_elasticDistance_false'),
+                options: {
+                    elasticDistance: false,
+                }
+            });
+
+            tape.run();
+        }
+    }
+
+    /**
      * Method pause/unpause
      */
     {
