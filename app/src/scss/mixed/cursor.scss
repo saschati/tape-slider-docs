@@ -1,0 +1,18 @@
+@use 'src/scss/core/functions' as f;
+
+.cursor {
+  --cursor-type: pointer;
+
+  &:hover {
+    cursor: f.v(cursor-type);
+  }
+
+  &_type {
+    &_pointer {
+      --cursor-type: pointer;
+    }
+    &_wait {
+      --cursor-type: wait;
+    }
+  }
+}

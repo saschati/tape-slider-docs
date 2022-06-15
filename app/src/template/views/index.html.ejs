@@ -149,9 +149,16 @@
         <div class="paragraph grid__area" style="--grid-area: paragraph_2"></div>
 
         <div id="docs" class="information grid__area" style="--grid-area: docs">
-            <h2 class="information__title title title_h2">Documentation:</h2>
+            <h2 class="information__title title title_h2">Documentation</h2>
             <p class="information__description">
-                Description of fields and behavior when manipulating them.
+                Description of fields and methods and behavior when manipulating them.
+            </p>
+        </div>
+
+        <div id="property" class="information grid__area" style="--grid-area: property">
+            <h2 class="information__title title title_h3">Property</h2>
+            <p class="information__description">
+                The list of possible properties at initialization of the designer.
             </p>
         </div>
         <div class="information grid__area" style="--grid-area: docs_wrapper">
@@ -334,6 +341,64 @@
             </p>
             <div class="information__tape tape tape_direction_row tape_jc_end js-tape-slider--left">
                 <div class="tape__item tape__item_direction_row bg bg_color_primary"></div>
+            </div>
+        </div>
+
+        <div id="methods" class="information grid__area" style="--grid-area: docs_methods">
+            <h2 class="information__title title title_h3">Methods</h2>
+            <p class="information__description">
+                List of available methods.
+            </p>
+        </div>
+        <div class="information grid__area" style="--grid-area: docs_methods_run">
+            <h3 class="information__title title title_h5">
+                <span class="weight weight_type_w9">run()</span>: void
+            </h3>
+            <p class="information__description">
+                Initializes the movement of the tape.
+            </p>
+            <code class="information__code code js-mirror-js" data-mirror="docs_methods_run"></code>
+        </div>
+        <div class="information grid__area" style="--grid-area: docs_methods_destroy">
+            <h3 class="information__title title title_h5">
+                <span class="weight weight_type_w9">destroy()</span>: void
+            </h3>
+            <p class="information__description">
+                Destroys the tape at the event and state level before it is run using the <span class="clr clr_color_third">run()</span> method.
+            </p>
+            <code class="information__code code js-mirror-js" data-mirror="docs_methods_destroy"></code>
+        </div>
+        <div class="information grid__area" style="--grid-area: docs_methods_pause">
+            <h3 class="information__title title title_h5">
+                <span class="weight weight_type_w9">pause()</span>: void
+            </h3>
+            <p class="information__description">
+                Pauses the movement of the tape.
+            </p>
+            <code class="information__code code js-mirror-js" data-mirror="docs_methods_pause"></code>
+        </div>
+        <div class="information grid__area" style="--grid-area: docs_methods_unpause">
+            <h3 class="information__title title title_h5">
+                <span class="weight weight_type_w9">unpause()</span>: void
+            </h3>
+            <p class="information__description">
+                Removes the tape from the pause and continues its work from the place where it was stopped.
+            </p>
+            <code class="information__code code js-mirror-js" data-mirror="docs_methods_unpause"></code>
+            <p class="information__description">
+                Application example.
+            </p>
+            <code class="information__code code js-mirror-js" data-mirror="docs_methods_pause_unpause"></code>
+            <p class="information__description information__description_for_tape">
+                Demonstrate the operation of the tape with the method of
+                <span class="clr clr_color_third">pause()</span> and <span class="clr clr_color_third">unpause()</span> hover the mouse cursor.
+            </p>
+            <div class="information__tape tape tape_direction_row js-tape-slider_pause_unpause cursor cursor_type_wait">
+                <div class="tape__item tape__item_direction_row bg bg_color_black"></div>
+                <div class="tape__item tape__item_direction_row bg bg_color_dark"></div>
+                <div class="tape__item tape__item_direction_row bg bg_color_third"></div>
+                <div class="tape__item tape__item_direction_row bg bg_color_primary"></div>
+                <div class="tape__item tape__item_direction_row bg bg_color_npm"></div>
             </div>
         </div>
 

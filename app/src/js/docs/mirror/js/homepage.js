@@ -39,6 +39,12 @@ window.addEventListener('load', function () {
 
     // Run tape
     tape.run();
+    // Pause tape
+    tape.pause();
+    // Unpause tape
+    tape.unpause();
+    // Destroy tape
+    tape.destroy();
 });`,
 
     docs_wrapper: `import Tape from "@saschati/tape-slider";
@@ -112,4 +118,38 @@ const tape = new Tape({
     },
     ...
 });`,
+
+    docs_methods_run: `import Tape from "@saschati/tape-slider";
+
+const tape = new Tape({...});
+
+tape.run();`,
+
+    docs_methods_destroy: `import Tape from "@saschati/tape-slider";
+
+const tape = new Tape({...});
+...
+tape.destroy();`,
+
+    docs_methods_pause: `import Tape from "@saschati/tape-slider";
+
+const tape = new Tape({...});
+...
+tape.pause();`,
+
+    docs_methods_unpause: `import Tape from "@saschati/tape-slider";
+
+const tape = new Tape({...});
+...
+tape.unpause();`,
+
+    docs_methods_pause_unpause: `import Tape from "@saschati/tape-slider";
+
+const wrapper = document.querySelector('.tape');
+const tape = new Tape({wrapper});
+
+tape.run();
+
+wrapper.addEventListener('mouseenter', e => void tape.pause());
+wrapper.addEventListener('mouseleave', e => tape.unpause());`,
 };

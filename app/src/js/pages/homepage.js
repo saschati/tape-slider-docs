@@ -110,4 +110,19 @@ window.addEventListener('load', function () {
             tape.run();
         }
     }
+
+    /**
+     * Method pause/unpause
+     */
+    {
+        {
+            const wrapper = document.querySelector('.js-tape-slider_pause_unpause');
+            const tape = new Tape({wrapper});
+
+            tape.run();
+
+            wrapper.addEventListener('mouseenter', e => void tape.pause());
+            wrapper.addEventListener('mouseleave', e => tape.unpause());
+        }
+    }
 });
