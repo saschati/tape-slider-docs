@@ -17,8 +17,8 @@ import Left from "@saschati/tape-slider/src/direction/left";
 import Up from "@saschati/tape-slider/src/direction/up";
 import Down from "@saschati/tape-slider/src/direction/down";
 // Offset classes, these classes are responsible for reproducing the movement of the object in the tape
-import ShiftY from "@saschati/tape-slider/src/direction/shifx/shift-y";
-import ShiftX from "@saschati/tape-slider/src/direction/shifx/shift-x";
+import ShiftY from "@saschati/tape-slider/src/direction/shift/shift-y";
+import ShiftX from "@saschati/tape-slider/src/direction/shift/shift-x";
 // A linear function for calculating how progress should be calculated
 import linage from "@saschati/tape-slider/src/animate/timing/linage";
 // The class of the tape itself
@@ -35,6 +35,7 @@ window.addEventListener('load', function () {
             timing: linage, // This field is responsible for linear functions for which time will be calculated according to the example of cubic-bezier from css
             insert: 'append', // The field responsible for the method of adding clones to the tape is required in some cases which will be described below
             elasticDistance: true, // This field indicates that you need to calculate the size of the tape, taking into account also the size of its elements, the default is true
+            optimize: true, // To optimize the work of the plugin, when the option is active, an observer will be thrown on the tape object relative to the window, when the user is not looking at the tape, it will not move, the default is true.
         }
     });
 
@@ -42,8 +43,8 @@ window.addEventListener('load', function () {
     tape.run();
     // Pause tape
     tape.pause();
-    // Unpause tape
-    tape.unpause();
+    // Resume tape
+    tape.resume()
     // Destroy tape
     tape.destroy();
 });`,
@@ -68,8 +69,8 @@ const tape = new Tape({
     ...
 });`,
 
-    docs_options_shift: `import ShiftY from "@saschati/tape-slider/src/direction/shifx/shift-y";
-import ShiftX from "@saschati/tape-slider/src/direction/shifx/shift-x";
+    docs_options_shift: `import ShiftY from "@saschati/tape-slider/src/direction/shift/shift-y";
+import ShiftX from "@saschati/tape-slider/src/direction/shift/shift-x";
 import Tape from "@saschati/tape-slider";
 
 const tape = new Tape({
@@ -92,9 +93,9 @@ const tape = new Tape({
 
     docs_options_timing: `import Tape from "@saschati/tape-slider";
 import linage from "@saschati/tape-slider/src/animate/timing/linage";
-import linage from "@saschati/tape-slider/src/animate/timing/bounce";
-import linage from "@saschati/tape-slider/src/animate/timing/circ";
-import linage from "@saschati/tape-slider/src/animate/timing/quad";
+import bounce from "@saschati/tape-slider/src/animate/timing/bounce";
+import circ from "@saschati/tape-slider/src/animate/timing/circ";
+import quad from "@saschati/tape-slider/src/animate/timing/quad";
 
 const tape = new Tape({
     ...
@@ -138,13 +139,13 @@ const tape = new Tape({...});
 ...
 tape.pause();`,
 
-    docs_methods_unpause: `import Tape from "@saschati/tape-slider";
+    docs_methods_resume: `import Tape from "@saschati/tape-slider";
 
 const tape = new Tape({...});
 ...
-tape.unpause();`,
+tape.resume();`,
 
-    docs_methods_pause_unpause: `import Tape from "@saschati/tape-slider";
+    docs_methods_pause_resume: `import Tape from "@saschati/tape-slider";
 
 const wrapper = document.querySelector('.tape');
 const tape = new Tape({wrapper});
@@ -152,7 +153,7 @@ const tape = new Tape({wrapper});
 tape.run();
 
 wrapper.addEventListener('mouseenter', e => void tape.pause());
-wrapper.addEventListener('mouseleave', e => tape.unpause());`,
+wrapper.addEventListener('mouseleave', e => tape.resume());`,
 
     docs_options_elasticDistance: `import Tape from "@saschati/tape-slider";
 
@@ -160,6 +161,16 @@ const tape = new Tape({
     ...
     options: {
         elasticDistance: true,
+    },
+    ...
+});`,
+
+    docs_options_optimize: `import Tape from "@saschati/tape-slider";
+
+const tape = new Tape({
+    ...
+    options: {
+        optimize: true,
     },
     ...
 });`,

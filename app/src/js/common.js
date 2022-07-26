@@ -1,7 +1,7 @@
 import Left from "@saschati/tape-slider/src/direction/left";
 import Up from "@saschati/tape-slider/src/direction/up";
 import Down from "@saschati/tape-slider/src/direction/down";
-import ShiftY from "@saschati/tape-slider/src/direction/shifx/shift-y";
+import ShiftY from "@saschati/tape-slider/src/direction/shift/shift-y";
 import Tape from "@saschati/tape-slider";
 
 import lozad from "lozad";

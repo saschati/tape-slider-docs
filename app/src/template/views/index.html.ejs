@@ -434,6 +434,40 @@
                 <div class="clr clr_color_white tape__item tape__item_direction_row bg bg_color_npm">20</div>
             </div>
         </div>
+        <div id="dec-options-optimize" class="information grid__area" style="--grid-area: docs_options_optimize">
+            <h3 class="information__title title title_h5">
+                <span class="weight weight_type_w9">options.optimize</span>: true | false
+            </h3>
+            <p class="information__description">
+                To optimize the work of the plugin, when the option is active, an observer will be thrown on the tape object relative to the window,
+                when the user is not looking at the tape, it will not move, the default is true.
+            </p>
+            <code class="information__code code js-mirror-js" data-mirror="docs_options_optimize"></code>
+            <p class="information__description">
+                <span class="clr clr_color_black">
+                    To see the difference just scroll up or down to hide the ribbon,
+                    the first ribbon will stay in place while the bottom one will continue to move.
+                </span>
+            </p>
+            <p class="information__description information__description_for_tape">
+                <span class="weight weight_type_w7 clr clr_color_black">
+                    options.optimize: true
+                </span>
+            </p>
+            <div class="information__tape tape tape_direction_row js-tape-slider--right">
+                <div class="clr clr_color_white tape__item tape__item_direction_row bg bg_color_black">1</div>
+                <div class="clr clr_color_white tape__item tape__item_direction_row bg bg_color_dark">2</div>
+            </div>
+            <p class="information__description information__description_for_tape">
+                <span class="weight weight_type_w7 clr clr_color_black">
+                    options.optimize: false
+                </span>
+            </p>
+            <div class="information__tape tape tape_direction_row js-tape-slider--right_optimize_false">
+                <div class="clr clr_color_white tape__item tape__item_direction_row bg bg_color_black">1</div>
+                <div class="clr clr_color_white tape__item tape__item_direction_row bg bg_color_dark">2</div>
+            </div>
+        </div>
 
         <div id="methods" class="information grid__area" style="--grid-area: docs_methods">
             <h2 class="information__title title title_h3">Methods</h2>
@@ -468,23 +502,23 @@
             </p>
             <code class="information__code code js-mirror-js" data-mirror="docs_methods_pause"></code>
         </div>
-        <div class="information grid__area" style="--grid-area: docs_methods_unpause">
+        <div class="information grid__area" style="--grid-area: docs_methods_resume">
             <h3 class="information__title title title_h5">
-                <span class="weight weight_type_w9">unpause()</span>: void
+                <span class="weight weight_type_w9">resume()</span>: void
             </h3>
             <p class="information__description">
                 Removes the tape from the pause and continues its work from the place where it was stopped.
             </p>
-            <code class="information__code code js-mirror-js" data-mirror="docs_methods_unpause"></code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_methods_resume"></code>
             <p class="information__description">
                 Application example.
             </p>
-            <code class="information__code code js-mirror-js" data-mirror="docs_methods_pause_unpause"></code>
+            <code class="information__code code js-mirror-js" data-mirror="docs_methods_pause_resume"></code>
             <p class="information__description information__description_for_tape">
                 Demonstrate the operation of the tape with the method of
-                <span class="clr clr_color_third">pause()</span> and <span class="clr clr_color_third">unpause()</span> hover the mouse cursor.
+                <span class="clr clr_color_third">pause()</span> and <span class="clr clr_color_third">resume()</span> hover the mouse cursor.
             </p>
-            <div class="information__tape tape tape_direction_row js-tape-slider_pause_unpause cursor cursor_type_wait">
+            <div class="information__tape tape tape_direction_row js-tape-slider_pause_resume cursor cursor_type_wait">
                 <div class="tape__item tape__item_direction_row bg bg_color_black"></div>
                 <div class="tape__item tape__item_direction_row bg bg_color_dark"></div>
                 <div class="tape__item tape__item_direction_row bg bg_color_third"></div>

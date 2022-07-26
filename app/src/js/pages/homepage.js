@@ -52,6 +52,7 @@ window.addEventListener('load', function () {
             options: {
                 duration: 5000,
                 timing: bounce,
+                optimize: false,
             }
         });
 
@@ -63,7 +64,8 @@ window.addEventListener('load', function () {
             direction: Right,
             options: {
                 duration: 5000,
-                timing: circ
+                timing: circ,
+                optimize: false,
             }
         });
 
@@ -75,7 +77,8 @@ window.addEventListener('load', function () {
             direction: Right,
             options: {
                 duration: 5000,
-                timing: linage
+                timing: linage,
+                optimize: false,
             }
         });
 
@@ -87,7 +90,8 @@ window.addEventListener('load', function () {
             direction: Right,
             options: {
                 duration: 5000,
-                timing: quad.bind(null, 2)
+                timing: quad.bind(null, 2),
+                optimize: false,
             }
         });
 
@@ -128,17 +132,33 @@ window.addEventListener('load', function () {
     }
 
     /**
+     * optimize false example
+     */
+    {
+        {
+            const tape = new Tape({
+                wrapper: document.querySelector('.js-tape-slider--right_optimize_false'),
+                options: {
+                    optimize: false,
+                }
+            });
+
+            tape.run();
+        }
+    }
+
+    /**
      * Method pause/unpause
      */
     {
         {
-            const wrapper = document.querySelector('.js-tape-slider_pause_unpause');
+            const wrapper = document.querySelector('.js-tape-slider_pause_resume');
             const tape = new Tape({wrapper});
 
             tape.run();
 
             wrapper.addEventListener('mouseenter', e => void tape.pause());
-            wrapper.addEventListener('mouseleave', e => tape.unpause());
+            wrapper.addEventListener('mouseleave', e => tape.resume());
         }
     }
 });
